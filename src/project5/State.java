@@ -126,11 +126,11 @@ public class State
     public int compareTo(int first, int other)
     {
         
-        if (this.calcCFR(first) < this.calcCFR(other))
+        if (this.calcCFR(first) < this.calcCFR(other) || this.calcCFR(first) == null)
         {
             return -1;
         }
-        else if (this.calcCFR(first) == this.calcCFR(other))
+        else if (this.calcCFR(first) == this.calcCFR(other) || this.calcCFR(other) == null)
         {
             return 0;
         }
@@ -148,7 +148,14 @@ public class State
         LinkedList<Double> list = new LinkedList<Double>();
         for (int i = 0; i < cases.size(); i++)
         {
-            list.add(this.calcCFR(i));
+            if (this.calcCFR(i) == null)
+            {
+                list.add(0.0);
+            }
+            else
+            {
+                list.add(this.calcCFR(i));
+            }
         }
         return list;
     }
