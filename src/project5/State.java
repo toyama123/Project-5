@@ -146,7 +146,7 @@ public class State
     public LinkedList<Double> getCFRList()
     {
         LinkedList<Double> list = new LinkedList<Double>();
-        for (int i = 0; i < cases.size(); i++)
+        for (int i = 1; i <= cases.size(); i++)
         {
             if (this.calcCFR(i) == null)
             {
