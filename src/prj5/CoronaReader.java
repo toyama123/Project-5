@@ -6,6 +6,12 @@ import java.util.LinkedList;
 import java.util.Scanner;
 import bsh.ParseException;
 
+/**
+ * Creates a corona reader
+ * @author toyama1
+ * @version 11/18/20
+ *
+ */
 public class CoronaReader {
     private LinkedList<State> corona;
     
